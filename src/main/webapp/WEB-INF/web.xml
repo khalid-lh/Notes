@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" version="5.0">
+  <servlet>
+    <description></description>
+    <display-name>authservlet</display-name>
+    <servlet-name>authservlet</servlet-name>
+    <servlet-class>est.dsic.controllers.authservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>authservlet</servlet-name>
+    <url-pattern>/authentication</url-pattern>
+  </servlet-mapping>
+  <display-name>atelier1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-env-ref>
+    <resource-env-ref-name>jdbc/db_notes</resource-env-ref-name>
+    <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+  </resource-env-ref>
+  <servlet>
+    <description></description>
+    <display-name>noteservlet</display-name>
+    <servlet-name>noteservlet</servlet-name>
+    <servlet-class>est.dsic.controllers.noteservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>noteservlet</servlet-name>
+    <url-pattern>/note_user</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>adminservlet</display-name>
+    <servlet-name>adminservlet</servlet-name>
+    <servlet-class>est.dsic.controllers.adminservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>adminservlet</servlet-name>
+    <url-pattern>/adminservlet</url-pattern>
+  </servlet-mapping>
+</web-app>
